@@ -8,7 +8,7 @@ $username = "root";
 $password= "";
 
 // Start using PDO
-$pdo = "mysql:host=$servername; dbname=$dbname";
+//$pdo = "mysql:host=$servername; dbname=$dbname";
 function saring($data){
 $data = trim($data);
 $data = stripcslashes($data);
