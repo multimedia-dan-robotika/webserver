@@ -8,17 +8,18 @@ $username = "root";
 $password= "";
 
 // Start using PDO
-// $pdo = "mysql:host=$servername; dbname=$dbname";
+//$pdo = "mysql:host=$servername; dbname=$dbname";
+$connection = new PDO( "mysql:host=$servername;dbname=$dbname", 'root', '');
+if(!$connection){
+	die("Fatal Error: Connection Failed!");
+}
 function saring($data){
 $data = trim($data);
 $data = stripcslashes($data);
 $data = htmlspecialchars($data);
 return $data;
 }
-$connection = new PDO( "mysql:host=$servername;dbname=$dbname", 'root', '');
-	if(!$connection){
-		die("Fatal Error: Connection Failed!");
-	}
+
 
 
 // Start using MYSQLI 
